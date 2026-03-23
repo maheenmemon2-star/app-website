@@ -1,1 +1,56 @@
+.navbar { /*https://www.w3schools.com/css/css_navbar_horizontal.asp */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
 
+  .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .nav-logo img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+  }
+
+  .nav-logo h1 {
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+  }
+
+  .navbar ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .navbar ul li {
+      margin-left: 25px;
+  }
+
+  .navbar ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+  }
+
+  .navbar ul li a:hover {
+      color: #188cff;
+      background-color: rgba(0, 123, 255, 0.454);
+  }
