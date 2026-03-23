@@ -54,3 +54,23 @@
       color: #188cff;
       background-color: rgba(0, 123, 255, 0.454);
   }
+
+  footer {
+  text-align: center;
+  padding: 20px;
+  color: rgb(33, 33, 33);
+
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 0.95rem;
+  color: rgb(33, 33, 33);
+}
+
+footer a:hover {
+  color: orange;
+
+}
