@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px 5%;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 40px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #00a55b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #00a55b;
+        }
+
+        .radio-group {
+            margin-top: 15px;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/SpotOn logo.png" alt="SpotOn logo">
+            <h1>SpotOn</h1>
+        </a>
+        <ul>
+            <li><a href="index.html"><h4>Home</h4></a></li>
+            <li><a href="about.html"><h4>About</h4></a></li>
+            <li><a href="financial.html"><h4>Financials</h4></a></li>
+            <li><a href="marketing.html"><h4>Marketing</h4></a></li>
+            <li><a href="team.html"><h4>Meet the team</h4></a></li>
+        </ul>
+    </nav>
+        <div class="content-wrapper">
+            <div class="container">
+            <h2>Get early access to SpotOn</h2>
+            <p>Be the first to plan hangouts that fit your budget, diet and vibe.</p>
+            <form action="/action_page.php"> <!-- https://www.w3schools.com/tags/tag_form.asp -->
+                <label for="fullname">Full name:</label>
+                <input type="text" id="fullname" name="fullname">
+                
+                <label for="email">Email address:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="password">
+                
+                <div class="radio-group">
+                    <p><strong>I am a:</strong></p>
+                    <input type="radio" id="user" name="customer" value="user">
+                    <label for="user" style="display:inline; margin:0;">User</label>
+                    
+                    <input type="radio" id="business" name="customer" value="business" style="margin-left: 20px;">
+                    <label for="business" style="display:inline; margin:0;">Business</label>
+                </div>
+                
+                <input type="submit" value="Join beta">
+            </form> 
+        </div>
+        </div>
+    <div class="footer">
+        <footer>
+            Copyright © 2026 SpotOn website | <a href="contact.html">Contact us</a>
+        </footer>
+    </div>
+</body>
+</html>
