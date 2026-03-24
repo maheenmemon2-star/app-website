@@ -1,3 +1,13 @@
+body {
+            font-family: sans-serif;
+            color: #111111;
+            font-size: 90%;
+            width: 100%;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
 .navbar { /*https://www.w3schools.com/css/css_navbar_horizontal.asp */
       display: flex;
       align-items: center;
@@ -45,15 +55,144 @@
   .navbar ul li a {
       text-decoration: none;
       color: #555;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.3s;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
   }
 
   .navbar ul li a:hover {
       color: #188cff;
       background-color: rgba(0, 123, 255, 0.454);
   }
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .navbar ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar ul li {
+        margin: 5px 10px;
+    }
+}
+
+/* Common Layout */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.container h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: clamp(24px, 5vw, 40px);
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #00a55b;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #008f4c;
+}
+
+.radio-group {
+    margin-top: 15px;
+}
+
+/* Sidebar Info */
+.info-side {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-card a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #00a55b;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.info-card a:hover {
+    background-color: #008f4c;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .info-side {
+        max-width: 500px;
+    }
+}
 
   footer { /* https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_footer_css */
   text-align: center;
