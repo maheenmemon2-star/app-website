@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style>
         .content-wrapper {
     display: flex;
@@ -138,28 +139,47 @@ form input[type="submit"]:hover {
         <div class="container">
             <h2>Contact us</h2>
             <p>If you have any questions about the app, this is the place to be asking away!</p>
-            <form action="/action_page.php"> <!-- https://www.w3schools.com/tags/tag_form.asp -->
-                <label for="fullname">Full name:</label>
-                <input type="text" id="fullname" name="fullname">
+            <form id="contact-messages"> <!-- https://www.w3schools.com/tags/tag_form.asp -->
+                <label for="name">Full name:</label>
+                <input type="text" id="name" name="name">
                 
                 <label for="email">Email address:</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" required>
                 
                 <div class="radio-group">
                     <p><strong>I am a:</strong></p>
-                    <input type="radio" id="user" name="customer" value="user">
+                    <input type="radio" id="user" name="type" value="user">
                     <label for="user" style="display:inline; margin:0;">User</label>
                     
-                    <input type="radio" id="business" name="customer" value="business" style="margin-left: 20px;">
+                    <input type="radio" id="business" name="type" value="business" style="margin-left: 20px;">
                     <label for="business" style="display:inline; margin:0;">Business</label>
                 </div>
 
                 <label for="message">Message:</label>
                 <input type="text" id="message" name="message">
                 
+                
                 <input type="submit" value="Submit">
             </form> 
         </div>
+        <script>
+            const scriptURL = "https://script.google.com/macros/s/AKfycbxdWI4-1wx-RbTwpgUIXL4PAb9Lq2Y1ndfwkf04V-D0SrdlET5i28WsjhejwxZmePzJZw/exec";
+            const form = document.getElementById('contact-messages');
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        swal("Success!", "Your message has been sent.", "success");
+                        form.reset();
+                    })
+                    .catch(error => {
+                        swal("Error!", "Something went wrong. Please try again.", "error");
+                        console.error('Error!', error.message);
+                    });
+            });
+        </script>
+
 
         <div class="info-side">
             <div class="info-card">
