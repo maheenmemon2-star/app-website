@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style>
  .content-wrapper {
     display: flex;
@@ -93,25 +94,25 @@ form input[type="submit"]:hover {
             <div class="container">
             <h2>Get early access to SpotOn</h2>
             <p>Be the first to plan hangouts that fit your budget, diet and vibe.</p>
-            <form action="/action_page.php"> <!-- https://www.w3schools.com/tags/tag_form.asp -->
+            <form name="signup-form"> <!-- https://www.w3schools.com/tags/tag_form.asp -->
                 <label for="fullname">Full name:</label>
-                <input type="text" id="fullname" name="fullname">
+                <input type="text" id="fullname" name="fullname" required>
                 
                 <label for="email">Email address:</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" required>
 
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
 
-                <label for="password">Confirm Password:</label>
-                <input type="password" id="password" name="password">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
                 
                 <div class="radio-group">
                     <p><strong>I am a:</strong></p>
-                    <input type="radio" id="user" name="customer" value="user">
+                    <input type="radio" id="user" name="customer" value="user" checked>
                     <label for="user" style="display:inline; margin:0;">User</label>
                     
                     <input type="radio" id="business" name="customer" value="business" style="margin-left: 20px;">
@@ -121,6 +122,31 @@ form input[type="submit"]:hover {
                 <input type="submit" value="Join beta">
             </form> 
         </div>
+        <script>
+            const scriptURL = "https://script.google.com/a/macros/mail.dcu.ie/s/AKfycbxEdLKcu6EVYSpI5wrzvvYQZT1CR4geVt_E0_0UaaLjYsYblMOa9aJSK6nulTvAsnAmyg/exec";
+            const form = document.forms['signup-form'];
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                const pass = form.elements['password'].value;
+                const confirmPass = form.elements['confirm-password'].value;
+                if (pass !== confirmPass) {
+                    swal("Error!", "Passwords do not match.", "error");
+                    return;
+                }
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        swal("Success!", "You have been registered for the beta.", "success");
+                        form.reset();
+                    })
+                    .catch(error => {
+                        swal("Error!", "Something went wrong. Please try again.", "error");
+                        console.error('Error!', error.message);
+                    });
+            });
+        </script>
         </div>
     <div class="footer">
         <footer>
