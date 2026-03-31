@@ -1,1 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team</title>
+  <link rel="stylesheet" href="css/style.css" />
 
+  <style>
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 5%;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 860px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    .section-intro h2 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 5vw, 40px);
+    }
+
+    .section-intro p {
+      margin: 0;
+      color: #444;
+      line-height: 1.7;
+      max-width: 680px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .team-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+      border: 1px solid rgba(24, 140, 255, 0.14);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .member-role {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background-color: rgba(24, 140, 255, 0.12);
+      color: #0f63b5;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .team-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+    }
+
+    .card-summary {
+      margin: 0 0 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .team-card h4,
+    .info-card h4 {
+      margin: 0 0 12px;
+      color: #188cff;
+      font-size: 1rem;
+    }
+
+    .team-card ul,
+    .info-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #333;
+      line-height: 1.65;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tool-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background-color: #eef6ff;
+      color: #115a9d;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .info-side {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-card {
+      background-color: #ffffff;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-card p {
+      margin: 0;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .project-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .project-links a {
+      text-decoration: none;
+      color: #0f63b5;
+      font-weight: 600;
+    }
+
+    .project-links a:hover {
+      color: #f28c18;
+    }
+
+    @media (max-width: 900px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/SpotOn logo.png" alt="SpotOn logo" />
+      <h1>SpotOn</h1>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="financials.html">Financials</a></li>
+      <li><a href="marketing.html">Marketing</a></li>
+      <li><a href="team.html">Meet the Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content-wrapper">
+    <section class="container">
+      <div class="section-intro">
+        <h2>Our Team</h2>
+        <p>
+          SpotOn was built through a mix of idea development, market research, poster design,
+          report writing, and prototyping. Each team member played a distinct role in shaping
+          the final app concept and presenting it clearly.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <span class="member-role">Innovation &amp; Research</span>
+          <h3>Conor O'Sullivan</h3>
+          <p class="card-summary">
+            Helped refine the app idea and supported both the report and poster development.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Researched possible app directions and helped finalise the chosen concept.</li>
+            <li>Helped decide what to keep and cut from earlier ideas during implementation.</li>
+            <li>Contributed design ideas and written content for the poster.</li>
+            <li>Completed Part 2 of the report: Innovation and Value Creation.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Canva</span>
+            <span class="tool-tag">Google Search</span>
+            <span class="tool-tag">Google Drive</span>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <span class="member-role">Report &amp; Poster Support</span>
+          <h3>Shannon Kelly</h3>
+          <p class="card-summary">
+            Helped polish the final presentation materials and supported the market-focused
+            section of the report.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Helped finalise poster ideas and choose suitable fonts for the design.</li>
+            <li>Worked on Part 3 of the report: Market and Users.</li>
+            <li>Formatted the final report document.</li>
+            <li>Contributed to the comparison table used in the project work.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Google Drive</span>
+            <span class="tool-tag">Google</span>
+            <span class="tool-tag">Canva</span>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <span class="member-role">Design &amp; Prototype</span>
+          <h3>Maheen Memon</h3>
+          <p class="card-summary">
+            Led the visual direction of the project, helped define the app concept, and built
+            the working prototype for SpotOn.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Designed the poster and suggested the app name SpotOn, which was selected.</li>
+            <li>Suggested the app idea that became the final concept.</li>
+            <li>Created a shared Google Doc to organise planning and teamwork.</li>
+            <li>Completed Part 1 of the report: Idea and Problem.</li>
+            <li>Built a working prototype in Figma and created a QR code linking to it.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Canva</span>
+            <span class="tool-tag">Pinterest</span>
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">QR Code Creator</span>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <span class="member-role">Data &amp; Visualisation</span>
+          <h3>Khalid Ogidan</h3>
+          <p class="card-summary">
+            Supported idea generation and researched the market data needed for the project
+            visuals and report.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Helped with brainstorming during the early planning stage.</li>
+            <li>Worked on Part 3 of the report and researched the data used for visualisation.</li>
+            <li>Supported the evidence-gathering process for the final project presentation.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Google Drive</span>
+            <span class="tool-tag">The Irish Times</span>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <span class="member-role">Idea &amp; Layout Development</span>
+          <h3>Jack Lunney</h3>
+          <p class="card-summary">
+            Helped define the early problem statement and supported the visual layout of the
+            final poster.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Completed Part 1 of the report: Idea and Problem.</li>
+            <li>Helped organise the poster design and layout.</li>
+            <li>Found an example poster that inspired the phone-centred display concept.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Pinterest</span>
+            <span class="tool-tag">Google Drive</span>
+            <span class="tool-tag">Google</span>
+            <span class="tool-tag">Canva</span>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <span class="member-role">Research &amp; Documentation</span>
+          <h3>John Finn</h3>
+          <p class="card-summary">
+            Conducted research and completed the financial plan for part 2 of the business plan, using the findings to support the project's development.
+          </p>
+          <h4>Key contributions</h4>
+          <ul>
+            <li>Evaluated the revenue streams and created the financial plan.</li>
+            <li>Compiled different data to generate the financial projections.</li>
+            <li>.</li>
+          </ul>
+          <div class="tool-tags">
+            <span class="tool-tag">Google docs</span>
+            <span class="tool-tag">Excel</span>
+          </div>
+        </article>
+
+        </div>
+      </div>
+    </section>
+
+    <aside class="info-side">
+      <article class="info-card">
+        <h4>Project Highlights</h4>
+        <ul>
+          <li>The final app name, SpotOn, came from team ideation and design discussions.</li>
+          <li>A working Figma prototype and web version were created to demonstrate the concept.</li>
+          <li>The report was split into clear sections so research, writing, and design could happen in parallel.</li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <h4>Prototype &amp; Poster Links</h4>
+        <div class="project-links">
+          <a href="https://www.canva.com/design/DAHARSbieJc/5d_ilwp1dV3jAcAAai6dDg/edit" target="_blank" rel="noopener noreferrer">Canva poster design</a>
+          <a href="https://www.figma.com/make/ifSHPpvQWQqktetFUinlgU/Group-Hangout-Finder-App?fullscreen=1&amp;t=7oIjIV5rvJZ3Qmne-1" target="_blank" rel="noopener noreferrer">Figma prototype</a>
+          <a href="https://git-wave-58565636.figma.site/" target="_blank" rel="noopener noreferrer">Web prototype</a>
+          <a href="https://qrcodecreator.com/en/dashboard" target="_blank" rel="noopener noreferrer">QR code generator</a>
+        </div>
+      </article>
+
+      <article class="info-card">
+        <h4>Shared Tools &amp; Inspiration</h4>
+        <div class="project-links">
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest inspiration board</a>
+          <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Google Drive collaboration</a>
+          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google research</a>
+        </div>
+        <p style="margin-top: 14px;">
+          The team used shared docs for brainstorming, online research for competitor and market insights,
+          and Canva for developing the final poster presentation.
+        </p>
+      </article>
+    </aside>
+  </main>
+
+  <footer>
+    Copyright © 2026 SpotOn website |
+    <a href="contact.html">Contact us</a>
+  </footer>
+</body>
+</html>
