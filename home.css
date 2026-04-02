@@ -97,7 +97,7 @@ p {
 .back {
     width: 100%;
     height: calc(100vh - 80px);
-    background-image: url('images/ home-page3.jpg'); 
+    background-image: url('images/home-page3.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
